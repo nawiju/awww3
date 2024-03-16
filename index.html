@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My HTML File</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./output.css" rel="stylesheet">
+    </head>
+    <style> 
+      .container {
+        text-align: center; 
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: #0a0a99;
+        margin: 10px;
+        color: white;
+        text-shadow: 2px 2px;
+        text-align: center;  
+        background: linear-gradient(#0a0a99 10%, red 70%, white 100%);
+      }
+
+      html {
+        display: grid;
+        height: 100%;
+      }
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 0;
+        gap: 8px;
+      }
+      body:has(main + aside) {
+        grid-template-columns: 1fr 200px;
+      }
+      body:has(aside + main) {
+        grid-template-columns: 200px 1fr;
+      }
+      .header1 {
+        grid-column: 1/-1;
+        background: Salmon;
+        padding: 1em;
+      }
+      main {
+        background: lightblue;
+        padding: 1em;
+        overflow: auto;
+      }
+      aside {
+        background: Chartreuse;
+        padding: 1em;
+      }
+      footer {
+        grid-column: 1/-1;
+        background: MediumOrchid;
+        padding: 1em;
+      }
+      h1 {
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+      }
+      ol.c {
+        list-style-type: upper-roman;
+        display: inline-block;
+        text-align: right;
+      }
+      div {
+        margin-bottom: 50px;
+      }
+      a {
+        text-decoration: underline;
+      }
+    </style>
+    <body>
+      
+
+      <header class="header1">
+        nagłówek 
+        <p class="h-9 w-9 bg-blue-500 rounded-full relative animate-ping"></p>
+      </header>
+      <aside>menu boczne, bo wiecie, boczek czy coś</aside>
+
+      <main> 
+        <header>
+           <h1 class="h-9 w-9 rounded-full relative animate-ping">Programming languages</h1>
+        </header>
+        <article>
+           <h2>Top 20 programming languages right now</h2>
+           <p></p>
+           <p class="text-sky-500 bg-amber-200">The TIOBE Index is a widely recognized ranking of programming languages based on their popularity and usage. It is updated monthly and provides insights into the trends and popularity of different programming languages in the software development industry.</p>
+           <p></p>
+           <p class="text-rose-500 bg-lime-200">The TIOBE Index uses various factors to determine the rankings, including search engine queries, job postings, and the number of skilled engineers, courses, and third-party vendors related to a particular programming language. The index assigns a score to each language, indicating its popularity and market demand.</p>
+       </article>
+       <section>
+           <details>
+               <summary>Fun fact about Python</summary>
+               <h4>Python is named after a TV show</h4>
+               <p class="text-green-500 bg-orange-400">Python seems like an odd name for a programming language. There is no truth to the popular belief that Python is named after the famous non-venomous snake of the same name. It has a whole different story to tell. Guido was a huge fan of “Monty Python’s Flying Circus”, a comedy TV show on the BBC. Back in the 70s, Monty Python was a renowned British comedy group that performed in British colonies. In honor of Monty Python’s Flying Circus, Guido decided to name the language Python, since he was a big fan.</p>
+           </details>
+       </section>
+       <div class="overflow-x-auto">
+           <table class="table-auto min-w-full divide-y divide-blue-200 bg-blue-50">
+               <caption>Top 10 programming languages</caption>
+               <thead>
+                   <tr>
+                       <th>Language</th>
+                       <th>Rating</th>
+                       <th>Change</th>
+                   </tr>
+               </thead>
+               <tbody class="bg-white divide-y divide-blue-200">
+                   <tr>
+                       <td>Python</td>
+                       <td>15.63%</td>
+                       <td>+0.80%</td>
+                   </tr>
+                   <tr>
+                       <td>C</td>
+                       <td>11.17%</td>
+                       <td>-3.56%</td>
+                   </tr>
+                   <tr>
+                       <td>C++</td>
+                       <td>10.70%</td>
+                       <td>-2.59%</td>
+                   </tr>
+                   <tr>
+                       <td>Java</td>
+                       <td>8.95%</td>
+                       <td>-4.61%</td>
+                   </tr>
+                   <tr>
+                       <td>C#</td>
+                       <td>7.54%</td>
+                       <td>+0.37%</td>
+                   </tr>
+                   <tr>
+                       <td>JavaScript</td>
+                       <td>3.38%</td>
+                       <td>+1.21%</td>
+                   </tr>
+                   <tr>
+                       <td>SQL</td>
+                       <td>1.92%</td>
+                       <td>-0.04%</td>
+                   </tr>
+                   <tr>
+                       <td>Go</td>
+                       <td>1.56%</td>
+                       <td>+0.32%</td>
+                   </tr>
+                   <tr>
+                       <td>Scratch</td>
+                       <td>1.46%</td>
+                       <td>+0.45%</td>
+                   </tr>
+                   <tr>
+                       <td>Visual Basic</td>
+                       <td>1.42%</td>
+                       <td>-3.33%</td>
+                   </tr>
+                   <tr>
+                       <td>Assembly language</td>
+                       <td>1.39%</td>
+                       <td>+0.28%</td>
+                   </tr>
+                   <tr>
+                       <td>PHP</td>
+                       <td>1.32%</td>
+                       <td>-0.29%</td>
+                   </tr>
+                   <tr>
+                       <td>MATLAB</td>
+                       <td>1.24%</td>
+                       <td>+0.16%</td>
+                       <tr>
+                           <td>C++</td>
+                           <td>10.70%</td>
+                           <td>-2.59%</td>
+                       </tr>
+                       <tr>
+                           <td>Java</td>
+                           <td>8.95%</td>
+                           <td>-4.61%</td>
+                       </tr>
+                   </tbody>
+               </table>
+           </div>
+           <strong>The next 10 languages in the ranking are:</strong>
+           <div class="container">
+           <ol class="c" >
+               <li>R</li>
+               <li>SAS</li>
+               <li>D</li>
+               <li>Ada</li>
+               <li>F#</li>
+               <li>Classic Visual Basic</li>
+               <li>Lua</li>
+               <li>Prolog</li>
+               <li>Perl</li>
+               <li>Haskell</li>
+               <li>(Visual) FoxPro</li>
+               <li>Dart</li>
+               <li>VBScript</li>
+               <li>Scala</li>
+               <li>Objective-C</li>
+               <li>Lisp</li>
+               <li>Julia</li>
+               <li>TypeScript</li>
+               <li>Logo</li>
+               <li>ML</li>
+               <li>Solidity</li>
+               <li>RPG</li>
+               <li>Erlang</li>
+               <li>PowerShell</li>
+               <li>Scheme</li>
+               <li>X++</li>
+               <li>Transact-SQL</li>
+               <li>GAMS</li>
+               <li>Forth</li>
+               <li>Bash</li>
+           </ol>
+           </div>
+
+          <div> 
+           <img src="https://cdn.britannica.com/30/199930-131-B3D1D347/computer.jpg  " alt="Image Description" class="shadow-lg rounded-lg shadow-red-700">
+           <p>Source:<a href="https://cdn.britannica.com/30/199930-131-B3D1D347/computer.jpg">Britannica</a></p>
+           </div>
+
+            <div> 
+            <p>
+               <em>
+                   For more information, visit the
+                   <a href="https://www.tiobe.com/tiobe-index/">TIOBE Index</a>
+                   website.
+               </em>
+           </p>
+           </div> 
+
+          <div>
+             <section>
+               <h2>Survey</h2>
+               <p>What is your favorite programming language?</p>
+               <form>
+                   <label for="name">Name:</label>
+                   <input
+                       type="text"
+                       id="name"
+                       name="name"
+                       required
+                   >
+                   <label for="language">Favorite programming language:</label>
+                   <select id="language" name="language">
+                       <optgroup label="Popular languages">
+                           <option value="python">Python</option>
+                           <option value="java">Java</option>
+                           <option value="javascript">JavaScript</option>
+                       </optgroup>
+                       <optgroup label="Other languages">
+                           <option value="c">C</option>
+                           <option value="cpp">C++</option>
+                           <option value="csharp">C#</option>
+                       </optgroup>
+                   </select>
+                   <button type="submit">Submit</button>
+               </form>
+           </section>
+           <section>
+               <h2>Task Progress</h2>
+               <progress value="50" max="100"></progress>
+           </section>
+          </div>
+
+          <img
+               src="https://www.mercurynews.com/wp-content/uploads/2023/05/GettyImages-1167416290.jpg?w=861"
+               alt="cat"
+               usemap="#cat"
+               width="600"
+               height="400"
+           >
+           <map name="cat">
+               <area
+                   shape="rect"
+                   coords="34,44,270,350"
+                   alt="cat"
+                   href="https://www.telegraph.co.uk/multimedia/archive/03332/stock_angry_cat_3332206b.jpg?imwidth=1280  "
+               >
+               <area
+                   shape="circle"
+                   coords="0,300,44"
+                   alt="cat"
+                   href="https://i.natgeofe.com/n/4cebbf38-5df4-4ed0-864a-4ebeb64d33a4/NationalGeographic_1468962_4x3.jpg"
+               >
+               <area
+                   shape="poly"
+                   coords="300,300,400,400,200,400"
+                   alt="cat"
+                   href="https://media.istockphoto.com/id/1361394182/photo/funny-british-shorthair-cat-portrait-looking-shocked-or-surprised.jpg?s=612x612&w=0&k=20&c=6yvVxdufrNvkmc50nCLCd8OFGhoJd6vPTNotl90L-vo="
+               >
+           </map>
+           <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7681.392401029701!2d133.3890400964742!3d67.55059177327416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5b9579da63386d09%3A0x1dda69f74af67b40!2sVerkhoyansk%2C%20Sakha%20Republic%2C%20Russia%2C%20678530!5e1!3m2!1sen!2spl!4v1710100505067!5m2!1sen!2spl"
+               width="600"
+               height="450"
+               style="border:0;"
+               allowfullscreen=""
+               loading="lazy"
+               referrerpolicy="no-referrer-when-downgrade"
+           ></iframe>
+           <img
+               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/SouthSudanStatesandAdministrativeAreas.svg/525px-SouthSudanStatesandAdministrativeAreas.svg.png"
+               alt="South Sudan"
+               width="600"
+               height="400"
+               usemap="#southsudan"
+           >
+           <map name="southsudan">
+               <area
+                   shape="rect"
+                   coords="100,100,200,200"
+                   alt="southsudan"
+                   href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpgGPaL0jL0oIeWyxsXe2rJ4vSgUX0UTSZMjUr9ekNtm_jo0iS8_6GXBEbu3yKMXqfLCU&usqp=CAU"
+               >
+               <area
+                   shape="circle"
+                   coords="200,200,100"
+                   alt="southsudan"
+                   href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cattle_Herders_at_Cattle_Camp_in_Rumbek%2C_South_Sudan.jpg/450px-Cattle_Herders_at_Cattle_Camp_in_Rumbek%2C_South_Sudan.jpg"
+               >
+               <area
+                   shape="rect"
+                   coords="350,0,600,200"
+                   ald="southsudan"
+                   href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/South_Sudan_Malakal_Marketplace_Aug_2005.jpg/375px-South_Sudan_Malakal_Marketplace_Aug_2005.jpg"
+               >
+           </map>
+              <p> Flexbox container with row direction</p>
+           <div class="flex flex-row">
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+           </div>
+           <p> Flexbox container with column direction</p>
+           <div class="flex flex-col">
+               <div class="item"></div>
+               <div class="item"></div>
+               <div class="item"></div>
+           </div>
+           <p> Flexbox container with row wrap</p>
+           <div class="flex">
+               <div class="item flex-auto">Element 1</div>
+               <div class="item flex-auto">Element 2</div>
+               <div class="item flex-auto">Element 3</div>
+               <div class="item flex-auto">Element 1</div>
+               <div class="item flex-auto">Element 2</div>
+               <div class="item flex-auto">Element 3</div>
+               <div class="item flex-auto">Element 1</div>
+           </div>
+           <p>Flex auto</p>
+           <div class="flex-auto">
+               <div class="item">Element 1</div>
+               <div class="item">Element 1</div>
+               <div class="item">Element 1</div>
+               <div class="item">Element 1</div>
+               <div class="item">Element 1</div>
+               <div class="item">Element 1</div>
+           </div>
+           <div class="flex">
+               <div class="item flex-auto">Element 1</div>
+               <div class="item flex-auto">Element 2</div>
+               <div class="item flex-auto">Element 3</div>
+           </div>
+           <p>Flex none</p>
+           <div class="flex">
+               <div class="flex-none w-14 h-14 bg-orange-400">
+                   UGA BUGA
+               </div>
+               <div class="flex-initial w-64 bg-orange-700">
+                   BUGA UGA
+               </div>
+               <div class="flex-initial w-32 bg-orange-900">
+                   XDDDDD
+               </div>
+           </div>
+           <footer>
+               <p>&copy; 2022 My Website. All rights reserved.</p>
+           </footer>
+
+      </main>
+      <footer>st00pka</footer>
+    </body>
+</html>
